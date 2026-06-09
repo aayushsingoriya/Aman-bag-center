@@ -1,0 +1,138 @@
+DOCTYPE html>
+
+<html lang="en">  
+<head>  <meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Admin Panel</title>  <link rel="stylesheet" href="style.css">  <style>  
+  
+body{  
+padding:20px;  
+}  
+  
+.admin-box{  
+max-width:900px;  
+margin:auto;  
+background:#1a1a1a;  
+padding:25px;  
+border-radius:15px;  
+}  
+  
+input{  
+width:100%;  
+padding:12px;  
+margin:8px 0;  
+border:none;  
+border-radius:8px;  
+}  
+  
+button{  
+padding:12px 18px;  
+border:none;  
+border-radius:8px;  
+cursor:pointer;  
+font-weight:600;  
+margin-top:10px;  
+}  
+  
+.save-btn{  
+background:#d4af37;  
+color:black;  
+}  
+  
+.delete-btn{  
+background:red;  
+color:white;  
+}  
+  
+.hidden{  
+display:none;  
+}  
+  
+.product-item{  
+background:#222;  
+padding:15px;  
+margin-top:15px;  
+border-radius:10px;  
+}  
+  
+h2,h3{  
+color:#d4af37;  
+}  
+  
+.stat-box{  
+background:#222;  
+padding:15px;  
+border-radius:10px;  
+margin:15px 0;  
+text-align:center;  
+}  
+  
+label{  
+display:block;  
+margin-top:10px;  
+}  
+  
+</style>  </head>  <body>  <div class="admin-box">  <h2>🔐 Admin Login</h2>  <input
+type="password"
+id="password"
+placeholder="Enter Password"
+
+> 
+
+<button
+class="save-btn"
+onclick="login()"
+
+> 
+
+Login
+</button>
+
+<div  
+id="adminPanel"  
+class="hidden"  
+>  <div class="stat-box">  <h3>Total Products</h3>  <h1 id="totalProducts">  
+0  
+</h1>  </div>  <hr>  <h2>➕ Add Product</h2>  <input
+id="productName"
+placeholder="Product Name"
+
+> 
+
+<input
+id="productPrice"
+placeholder="Price"
+
+> 
+
+<input
+id="productCategory"
+placeholder="Category"
+
+> 
+
+<input
+type="file"
+id="productImage"
+accept="image/*"
+
+> 
+
+<label>  <input
+type="checkbox"
+id="featured"
+
+> 
+
+Featured Product
+
+</label>  <button
+class="save-btn"
+onclick="addProduct()"
+
+> 
+
+Save Product
+</button>
+
+<hr>  <h2>📦 Products</h2>  <div id="productList">  </div>  </div>  </div>  <script src="admin.js"></script>  </body>  
+</html>
